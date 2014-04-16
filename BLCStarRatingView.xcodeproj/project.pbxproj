@@ -10,15 +10,19 @@
 		9A34C61218FF297A00155D94 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A34C61118FF297A00155D94 /* Foundation.framework */; };
 		9A34C61418FF297A00155D94 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A34C61318FF297A00155D94 /* CoreGraphics.framework */; };
 		9A34C61618FF297A00155D94 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A34C61518FF297A00155D94 /* UIKit.framework */; };
-		9A34C61C18FF297A00155D94 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A34C61A18FF297A00155D94 /* InfoPlist.strings */; };
-		9A34C61E18FF297A00155D94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A34C61D18FF297A00155D94 /* main.m */; };
-		9A34C62218FF297A00155D94 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A34C62118FF297A00155D94 /* AppDelegate.m */; };
-		9A34C62418FF297A00155D94 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A34C62318FF297A00155D94 /* Images.xcassets */; };
 		9A34C62B18FF297A00155D94 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A34C62A18FF297A00155D94 /* XCTest.framework */; };
 		9A34C62C18FF297A00155D94 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A34C61118FF297A00155D94 /* Foundation.framework */; };
 		9A34C62D18FF297A00155D94 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A34C61518FF297A00155D94 /* UIKit.framework */; };
 		9A34C63518FF297A00155D94 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A34C63318FF297A00155D94 /* InfoPlist.strings */; };
 		9A34C63718FF297A00155D94 /* BLCStarRatingViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A34C63618FF297A00155D94 /* BLCStarRatingViewTests.m */; };
+		9A34C64A18FF29F100155D94 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A34C64218FF29F100155D94 /* AppDelegate.m */; };
+		9A34C64C18FF29F100155D94 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A34C64618FF29F100155D94 /* InfoPlist.strings */; };
+		9A34C64D18FF29F100155D94 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A34C64818FF29F100155D94 /* Images.xcassets */; };
+		9A34C64E18FF29F100155D94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A34C64918FF29F100155D94 /* main.m */; };
+		9A34C65218FF2A2100155D94 /* BLCStarRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A34C65118FF2A2100155D94 /* BLCStarRatingView.m */; };
+		9A34C65A18FF3F9300155D94 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A34C65918FF3F9300155D94 /* QuartzCore.framework */; };
+		9A34C65E18FF4C3500155D94 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A34C65C18FF4C3500155D94 /* ViewController.m */; };
+		9A34C65F18FF4C3500155D94 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A34C65D18FF4C3500155D94 /* ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,18 +40,24 @@
 		9A34C61118FF297A00155D94 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9A34C61318FF297A00155D94 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		9A34C61518FF297A00155D94 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		9A34C61918FF297A00155D94 /* BLCStarRatingView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BLCStarRatingView-Info.plist"; sourceTree = "<group>"; };
-		9A34C61B18FF297A00155D94 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		9A34C61D18FF297A00155D94 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9A34C61F18FF297A00155D94 /* BLCStarRatingView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BLCStarRatingView-Prefix.pch"; sourceTree = "<group>"; };
-		9A34C62018FF297A00155D94 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		9A34C62118FF297A00155D94 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9A34C62318FF297A00155D94 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9A34C62918FF297A00155D94 /* BLCStarRatingViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BLCStarRatingViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A34C62A18FF297A00155D94 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		9A34C63218FF297A00155D94 /* BLCStarRatingViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BLCStarRatingViewTests-Info.plist"; sourceTree = "<group>"; };
 		9A34C63418FF297A00155D94 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9A34C63618FF297A00155D94 /* BLCStarRatingViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLCStarRatingViewTests.m; sourceTree = "<group>"; };
+		9A34C64118FF29F100155D94 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = BLCStarRatingViewSample/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		9A34C64218FF29F100155D94 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = BLCStarRatingViewSample/AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		9A34C64318FF29F100155D94 /* BLCStarRatingView-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "BLCStarRatingView-Info.plist"; path = "BLCStarRatingViewSample/BLCStarRatingView-Info.plist"; sourceTree = SOURCE_ROOT; };
+		9A34C64418FF29F100155D94 /* BLCStarRatingView-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "BLCStarRatingView-Prefix.pch"; path = "BLCStarRatingViewSample/BLCStarRatingView-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		9A34C64718FF29F100155D94 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		9A34C64818FF29F100155D94 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = BLCStarRatingViewSample/Images.xcassets; sourceTree = SOURCE_ROOT; };
+		9A34C64918FF29F100155D94 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = BLCStarRatingViewSample/main.m; sourceTree = SOURCE_ROOT; };
+		9A34C65018FF2A2100155D94 /* BLCStarRatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLCStarRatingView.h; path = BLCStarRatingView/BLCStarRatingView.h; sourceTree = "<group>"; };
+		9A34C65118FF2A2100155D94 /* BLCStarRatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLCStarRatingView.m; path = BLCStarRatingView/BLCStarRatingView.m; sourceTree = "<group>"; };
+		9A34C65918FF3F9300155D94 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9A34C65B18FF4C3500155D94 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = BLCStarRatingViewSample/ViewController.h; sourceTree = SOURCE_ROOT; };
+		9A34C65C18FF4C3500155D94 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = BLCStarRatingViewSample/ViewController.m; sourceTree = SOURCE_ROOT; };
+		9A34C65D18FF4C3500155D94 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ViewController.xib; path = BLCStarRatingViewSample/ViewController.xib; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A34C65A18FF3F9300155D94 /* QuartzCore.framework in Frameworks */,
 				9A34C61418FF297A00155D94 /* CoreGraphics.framework in Frameworks */,
 				9A34C61618FF297A00155D94 /* UIKit.framework in Frameworks */,
 				9A34C61218FF297A00155D94 /* Foundation.framework in Frameworks */,
@@ -77,7 +88,8 @@
 		9A34C60518FF297A00155D94 = {
 			isa = PBXGroup;
 			children = (
-				9A34C61718FF297A00155D94 /* BLCStarRatingView */,
+				9A34C64018FF298B00155D94 /* BLCStarRatingView */,
+				9A34C61718FF297A00155D94 /* BLCStarRatingViewSample */,
 				9A34C63018FF297A00155D94 /* BLCStarRatingViewTests */,
 				9A34C61018FF297A00155D94 /* Frameworks */,
 				9A34C60F18FF297A00155D94 /* Products */,
@@ -96,6 +108,7 @@
 		9A34C61018FF297A00155D94 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A34C65918FF3F9300155D94 /* QuartzCore.framework */,
 				9A34C61118FF297A00155D94 /* Foundation.framework */,
 				9A34C61318FF297A00155D94 /* CoreGraphics.framework */,
 				9A34C61518FF297A00155D94 /* UIKit.framework */,
@@ -104,26 +117,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		9A34C61718FF297A00155D94 /* BLCStarRatingView */ = {
+		9A34C61718FF297A00155D94 /* BLCStarRatingViewSample */ = {
 			isa = PBXGroup;
 			children = (
-				9A34C62018FF297A00155D94 /* AppDelegate.h */,
-				9A34C62118FF297A00155D94 /* AppDelegate.m */,
-				9A34C62318FF297A00155D94 /* Images.xcassets */,
-				9A34C61818FF297A00155D94 /* Supporting Files */,
+				9A34C65B18FF4C3500155D94 /* ViewController.h */,
+				9A34C65C18FF4C3500155D94 /* ViewController.m */,
+				9A34C65D18FF4C3500155D94 /* ViewController.xib */,
+				9A34C64118FF29F100155D94 /* AppDelegate.h */,
+				9A34C64218FF29F100155D94 /* AppDelegate.m */,
+				9A34C64F18FF29FA00155D94 /* Others */,
 			);
+			name = BLCStarRatingViewSample;
 			path = BLCStarRatingView;
-			sourceTree = "<group>";
-		};
-		9A34C61818FF297A00155D94 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				9A34C61918FF297A00155D94 /* BLCStarRatingView-Info.plist */,
-				9A34C61A18FF297A00155D94 /* InfoPlist.strings */,
-				9A34C61D18FF297A00155D94 /* main.m */,
-				9A34C61F18FF297A00155D94 /* BLCStarRatingView-Prefix.pch */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		9A34C63018FF297A00155D94 /* BLCStarRatingViewTests */ = {
@@ -142,6 +147,36 @@
 				9A34C63318FF297A00155D94 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9A34C64018FF298B00155D94 /* BLCStarRatingView */ = {
+			isa = PBXGroup;
+			children = (
+				9A34C65018FF2A2100155D94 /* BLCStarRatingView.h */,
+				9A34C65118FF2A2100155D94 /* BLCStarRatingView.m */,
+			);
+			name = BLCStarRatingView;
+			sourceTree = "<group>";
+		};
+		9A34C64518FF29F100155D94 /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				9A34C64618FF29F100155D94 /* InfoPlist.strings */,
+			);
+			name = en.lproj;
+			path = BLCStarRatingViewSample/en.lproj;
+			sourceTree = SOURCE_ROOT;
+		};
+		9A34C64F18FF29FA00155D94 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				9A34C64318FF29F100155D94 /* BLCStarRatingView-Info.plist */,
+				9A34C64418FF29F100155D94 /* BLCStarRatingView-Prefix.pch */,
+				9A34C64518FF29F100155D94 /* en.lproj */,
+				9A34C64818FF29F100155D94 /* Images.xcassets */,
+				9A34C64918FF29F100155D94 /* main.m */,
+			);
+			name = Others;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,8 +254,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A34C61C18FF297A00155D94 /* InfoPlist.strings in Resources */,
-				9A34C62418FF297A00155D94 /* Images.xcassets in Resources */,
+				9A34C64D18FF29F100155D94 /* Images.xcassets in Resources */,
+				9A34C65F18FF4C3500155D94 /* ViewController.xib in Resources */,
+				9A34C64C18FF29F100155D94 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,8 +275,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A34C62218FF297A00155D94 /* AppDelegate.m in Sources */,
-				9A34C61E18FF297A00155D94 /* main.m in Sources */,
+				9A34C64E18FF29F100155D94 /* main.m in Sources */,
+				9A34C64A18FF29F100155D94 /* AppDelegate.m in Sources */,
+				9A34C65E18FF4C3500155D94 /* ViewController.m in Sources */,
+				9A34C65218FF2A2100155D94 /* BLCStarRatingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,18 +301,18 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9A34C61A18FF297A00155D94 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9A34C61B18FF297A00155D94 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		9A34C63318FF297A00155D94 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				9A34C63418FF297A00155D94 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9A34C64618FF29F100155D94 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A34C64718FF29F100155D94 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -314,7 +352,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -346,7 +384,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -358,8 +396,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BLCStarRatingView/BLCStarRatingView-Prefix.pch";
-				INFOPLIST_FILE = "BLCStarRatingView/BLCStarRatingView-Info.plist";
+				GCC_PREFIX_HEADER = "BLCStarRatingViewSample/BLCStarRatingView-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/BLCStarRatingViewSample",
+				);
+				INFOPLIST_FILE = "BLCStarRatingViewSample/BLCStarRatingView-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -371,8 +414,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BLCStarRatingView/BLCStarRatingView-Prefix.pch";
-				INFOPLIST_FILE = "BLCStarRatingView/BLCStarRatingView-Info.plist";
+				GCC_PREFIX_HEADER = "BLCStarRatingViewSample/BLCStarRatingView-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/BLCStarRatingViewSample",
+				);
+				INFOPLIST_FILE = "BLCStarRatingViewSample/BLCStarRatingView-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
