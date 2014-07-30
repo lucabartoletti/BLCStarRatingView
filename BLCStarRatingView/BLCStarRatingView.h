@@ -8,10 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSInteger, BLCStarRatingViewState) {
-    BLCStarRatingViewStateNormal,
-    BLCStarRatingViewStateHighlighted
-};
+@class BLCStarRatingView;
+
+@protocol BLCStarRatingViewDelegate <NSObject>
+
+@optional
+
+- (void)starRatingViewUpdateBegan:(BLCStarRatingView*)ratingView;
+
+- (void)starRatingView:(BLCStarRatingView*)starRatingView rateDidChange:(NSUInteger)value;
+
+- (void)starRatingViewUpdateEnded:(BLCStarRatingView*)ratingView;
+
+@end
 
 @interface BLCStarRatingView : UIView
 
@@ -20,17 +29,21 @@ typedef NS_ENUM(NSInteger, BLCStarRatingViewState) {
  */
 @property (assign, nonatomic) NSUInteger rating;
 
+@property (weak, nonatomic) id<BLCStarRatingViewDelegate> delegate;
+
 /**
  *  The horizontal space between stars. Default is 5
  */
 @property (assign, nonatomic) CGFloat starHorizontalSpace;
 
 /**
- *  Set the star image for the state
- *
- *  @param image The image of the star
- *  @param state The state that will use the image
+ *  The rated image
  */
-- (void)setImage:(UIImage*)image forState:(BLCStarRatingViewState)state;
+@property (strong, nonatomic) UIImage *ratedImage;
+
+/**
+ *  The placeholder image.
+ */
+@property (strong, nonatomic) UIImage *placeholderImage;
 
 @end

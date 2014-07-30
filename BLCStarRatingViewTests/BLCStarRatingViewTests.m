@@ -7,28 +7,49 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "BLCStarRatingView.h"
 
 @interface BLCStarRatingViewTests : XCTestCase
 
 @end
 
 @implementation BLCStarRatingViewTests
+{
+    BLCStarRatingView *_ratingView;
+}
 
 - (void)setUp
 {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    _ratingView = [BLCStarRatingView new];
 }
 
 - (void)tearDown
 {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testThatExists
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    XCTAssertNotNil([BLCStarRatingView new], @"The BLCStarRatingView should be instantiable");
+}
+
+#pragma mark - setter
+
+- (void)testThatRatingIsSettable
+{
+    _ratingView.rating = 1;
+    
+    XCTAssertTrue(_ratingView.rating == 1, @"The rating should be setted to 1");
+}
+
+- (void)testThatDelegateIsSettable
+{
+    id<BLCStarRatingViewDelegate> obj = (id<BLCStarRatingViewDelegate>)[NSObject new];
+    
+    _ratingView.delegate = obj;
+    XCTAssertTrue([obj isEqual:_ratingView.delegate], @"The delegate method should be settable");
 }
 
 @end
