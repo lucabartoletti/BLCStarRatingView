@@ -4,9 +4,6 @@ BLCStarRatingView
 
 A star rating view for iOS
 
-Features
-=================
-
 ![Alt text](https://raw.githubusercontent.com/lucabartoletti/BLCStarRatingView/master/README/screenshot.png "screenshot.png")
 
 * Tested for iOS6+
@@ -15,8 +12,16 @@ Features
 
 Try the sample app to test the component
 
-Todo
-=================
+#### Podfile
+
+The component can be installed easily using cocoapod
+
+```ruby
+platform :ios, '6.0'
+pod "BLCStarRatingView", "~> 1.0"
+```
+
+#### Todo
 
 * Improve the tests
 * Add a 'continuous' property to indicate whether changes of the value generate continuous update events
