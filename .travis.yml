@@ -2,7 +2,6 @@ language: objective-c
 
 before_install: 
  - brew update
- - brew install xctool
 
 script:
 xctool -workspace BLCStarRatingView.xcworkspace -scheme BLCStarRatingView ONLY_ACTIVE_ARCH=NO build
