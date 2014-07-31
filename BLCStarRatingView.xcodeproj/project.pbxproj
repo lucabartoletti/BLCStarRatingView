@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4966D8ECBB9C4B6A86120720 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5389D1FD1E04931AC9812E6 /* libPods.a */; };
 		9A05D5541989CBFC00988C8D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A34C62A18FF297A00155D94 /* XCTest.framework */; };
+		9A05D5581989D6E900988C8D /* BLCStarRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A05D5571989D6E900988C8D /* BLCStarRatingView.m */; };
 		9A34C61218FF297A00155D94 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A34C61118FF297A00155D94 /* Foundation.framework */; };
 		9A34C61418FF297A00155D94 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A34C61318FF297A00155D94 /* CoreGraphics.framework */; };
 		9A34C61618FF297A00155D94 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A34C61518FF297A00155D94 /* UIKit.framework */; };
@@ -20,7 +21,6 @@
 		9A34C64C18FF29F100155D94 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A34C64618FF29F100155D94 /* InfoPlist.strings */; };
 		9A34C64D18FF29F100155D94 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A34C64818FF29F100155D94 /* Images.xcassets */; };
 		9A34C64E18FF29F100155D94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A34C64918FF29F100155D94 /* main.m */; };
-		9A34C65218FF2A2100155D94 /* BLCStarRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A34C65118FF2A2100155D94 /* BLCStarRatingView.m */; };
 		9A34C65A18FF3F9300155D94 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A34C65918FF3F9300155D94 /* QuartzCore.framework */; };
 		9A34C65E18FF4C3500155D94 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A34C65C18FF4C3500155D94 /* ViewController.m */; };
 		9A34C65F18FF4C3500155D94 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A34C65D18FF4C3500155D94 /* ViewController.xib */; };
@@ -39,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		345E2F5CF564413C8A02CEB5 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		9A05D5561989D6E900988C8D /* BLCStarRatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLCStarRatingView.h; sourceTree = "<group>"; };
+		9A05D5571989D6E900988C8D /* BLCStarRatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLCStarRatingView.m; sourceTree = "<group>"; };
 		9A34C60E18FF297A00155D94 /* BLCStarRatingView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLCStarRatingView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A34C61118FF297A00155D94 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9A34C61318FF297A00155D94 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -55,8 +57,6 @@
 		9A34C64718FF29F100155D94 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
 		9A34C64818FF29F100155D94 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = BLCStarRatingViewSample/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		9A34C64918FF29F100155D94 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = BLCStarRatingViewSample/main.m; sourceTree = SOURCE_ROOT; };
-		9A34C65018FF2A2100155D94 /* BLCStarRatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLCStarRatingView.h; path = BLCStarRatingView/BLCStarRatingView.h; sourceTree = "<group>"; };
-		9A34C65118FF2A2100155D94 /* BLCStarRatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLCStarRatingView.m; path = BLCStarRatingView/BLCStarRatingView.m; sourceTree = "<group>"; };
 		9A34C65918FF3F9300155D94 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		9A34C65B18FF4C3500155D94 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = BLCStarRatingViewSample/ViewController.h; sourceTree = SOURCE_ROOT; };
 		9A34C65C18FF4C3500155D94 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = BLCStarRatingViewSample/ViewController.m; sourceTree = SOURCE_ROOT; };
@@ -92,10 +92,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A05D5551989D6E900988C8D /* BLCStarRatingView */ = {
+			isa = PBXGroup;
+			children = (
+				9A05D5561989D6E900988C8D /* BLCStarRatingView.h */,
+				9A05D5571989D6E900988C8D /* BLCStarRatingView.m */,
+			);
+			name = BLCStarRatingView;
+			path = BLCStarRatingViewSample/BLCStarRatingView;
+			sourceTree = "<group>";
+		};
 		9A34C60518FF297A00155D94 = {
 			isa = PBXGroup;
 			children = (
-				9A34C64018FF298B00155D94 /* BLCStarRatingView */,
+				9A05D5551989D6E900988C8D /* BLCStarRatingView */,
 				9A34C61718FF297A00155D94 /* BLCStarRatingViewSample */,
 				9A34C63018FF297A00155D94 /* BLCStarRatingViewTests */,
 				9A34C61018FF297A00155D94 /* Frameworks */,
@@ -157,15 +167,6 @@
 				9A34C63318FF297A00155D94 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		9A34C64018FF298B00155D94 /* BLCStarRatingView */ = {
-			isa = PBXGroup;
-			children = (
-				9A34C65018FF2A2100155D94 /* BLCStarRatingView.h */,
-				9A34C65118FF2A2100155D94 /* BLCStarRatingView.m */,
-			);
-			name = BLCStarRatingView;
 			sourceTree = "<group>";
 		};
 		9A34C64518FF29F100155D94 /* en.lproj */ = {
@@ -323,9 +324,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A34C64E18FF29F100155D94 /* main.m in Sources */,
+				9A05D5581989D6E900988C8D /* BLCStarRatingView.m in Sources */,
 				9A34C64A18FF29F100155D94 /* AppDelegate.m in Sources */,
 				9A34C65E18FF4C3500155D94 /* ViewController.m in Sources */,
-				9A34C65218FF2A2100155D94 /* BLCStarRatingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
