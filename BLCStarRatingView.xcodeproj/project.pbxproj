@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4966D8ECBB9C4B6A86120720 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5389D1FD1E04931AC9812E6 /* libPods.a */; };
+		9A05D5541989CBFC00988C8D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A34C62A18FF297A00155D94 /* XCTest.framework */; };
 		9A34C61218FF297A00155D94 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A34C61118FF297A00155D94 /* Foundation.framework */; };
 		9A34C61418FF297A00155D94 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A34C61318FF297A00155D94 /* CoreGraphics.framework */; };
 		9A34C61618FF297A00155D94 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A34C61518FF297A00155D94 /* UIKit.framework */; };
-		9A34C62B18FF297A00155D94 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A34C62A18FF297A00155D94 /* XCTest.framework */; };
 		9A34C62C18FF297A00155D94 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A34C61118FF297A00155D94 /* Foundation.framework */; };
 		9A34C62D18FF297A00155D94 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A34C61518FF297A00155D94 /* UIKit.framework */; };
 		9A34C63518FF297A00155D94 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A34C63318FF297A00155D94 /* InfoPlist.strings */; };
@@ -61,6 +61,7 @@
 		9A34C65B18FF4C3500155D94 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = BLCStarRatingViewSample/ViewController.h; sourceTree = SOURCE_ROOT; };
 		9A34C65C18FF4C3500155D94 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = BLCStarRatingViewSample/ViewController.m; sourceTree = SOURCE_ROOT; };
 		9A34C65D18FF4C3500155D94 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ViewController.xib; path = BLCStarRatingViewSample/ViewController.xib; sourceTree = SOURCE_ROOT; };
+		9ACBE3201989C74B00CA7A91 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		9AFF8DF21989B10400DA19C0 /* podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = podfile; sourceTree = SOURCE_ROOT; };
 		A5389D1FD1E04931AC9812E6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -82,7 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A34C62B18FF297A00155D94 /* XCTest.framework in Frameworks */,
+				9A05D5541989CBFC00988C8D /* XCTest.framework in Frameworks */,
 				9A34C62D18FF297A00155D94 /* UIKit.framework in Frameworks */,
 				9A34C62C18FF297A00155D94 /* Foundation.framework in Frameworks */,
 			);
@@ -115,6 +116,7 @@
 		9A34C61018FF297A00155D94 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9ACBE3201989C74B00CA7A91 /* SenTestingKit.framework */,
 				9A34C65918FF3F9300155D94 /* QuartzCore.framework */,
 				9A34C61118FF297A00155D94 /* Foundation.framework */,
 				9A34C61318FF297A00155D94 /* CoreGraphics.framework */,
@@ -449,6 +451,7 @@
 					"$(SRCROOT)/BLCStarRatingViewSample",
 				);
 				INFOPLIST_FILE = "BLCStarRatingViewSample/BLCStarRatingView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -468,6 +471,7 @@
 					"$(SRCROOT)/BLCStarRatingViewSample",
 				);
 				INFOPLIST_FILE = "BLCStarRatingViewSample/BLCStarRatingView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

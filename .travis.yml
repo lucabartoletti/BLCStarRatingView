@@ -1,5 +1,9 @@
 language: objective-c
 
-xcode_project: BLCStarRatingView.xcodeproj # path to your xcodeproj folder
+before_install: 
+ - brew update
+ - brew install xctool
 
-xcode_scheme: BLCStarRatingView
+script:
+xctool -workspace BLCStarRatingView.xcworkspace -scheme BLCStarRatingViewTests -sdk iphonesimulator7.1 ONLY_ACTIVE_ARCH=NO build -simulator ipad
+xctool -workspace BLCStarRatingView.xcworkspace -scheme BLCStarRatingViewTests -sdk iphonesimulator7.1 ONLY_ACTIVE_ARCH=NO test -test-sdk iphonesimulator7.1 -simulator ipad
