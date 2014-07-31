@@ -1,5 +1,5 @@
 language: objective-c
 
 script:
-xctool -workspace BLCStarRatingView.xcworkspace -scheme BLCStarRatingView ONLY_ACTIVE_ARCH=NO build
-xctool -workspace BLCStarRatingView.xcworkspace -scheme BLCStarRatingViewTests -sdk iphonesimulator7.1 ONLY_ACTIVE_ARCH=NO test -test-sdk iphonesimulator7.1 -simulator ipad
+- xctool -workspace BLCStarRatingView.xcworkspace -scheme BLCStarRatingView ONLY_ACTIVE_ARCH=NO build
+- xctool -workspace BLCStarRatingView.xcworkspace -scheme BLCStarRatingViewTests -sdk iphonesimulator7.1 ONLY_ACTIVE_ARCH=NO test -test-sdk iphonesimulator7.1 -simulator ipad
