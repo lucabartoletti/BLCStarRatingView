@@ -10,7 +10,8 @@ Features
 ![Alt text](https://raw.githubusercontent.com/lucabartoletti/BLCStarRatingView/master/README/screenshot.png "screenshot.png")
 
 * Tested for iOS6+
-* It works with autolayout, if needed it is able to autoresize to fit the rating view
+* It works with autolayout, if needed the view is able to autoresize to fit stars
+* Easy to setup.
 
 Try the sample app to test the component
 
