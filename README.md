@@ -7,7 +7,7 @@ A star rating view for iOS
 ![Alt text](https://raw.githubusercontent.com/lucabartoletti/BLCStarRatingView/master/README/screenshot.png "screenshot.png")
 
 * Tested for iOS6+
-* It works with autolayout, if needed the view is able to autoresize to fit stars
+* It works with autolayout, if needed the view is able to autoresize itself to fit the stars
 * Easy to setup.
 
 Try the sample app to test the component
