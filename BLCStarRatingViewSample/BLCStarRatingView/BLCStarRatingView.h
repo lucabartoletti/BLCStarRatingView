@@ -10,6 +10,12 @@
 
 @class BLCStarRatingView;
 
+/**
+ *  The BLCStarRatingViewDelegate defines the methods that informs you
+ *  about the updates of the rating of a BLCStarRatingView
+ *
+ *  @see BLCStarRatingView
+ */
 @protocol BLCStarRatingViewDelegate <NSObject>
 
 @optional
@@ -38,6 +44,18 @@
 
 @end
 
+/**
+ *  A BLCStarRatingView is a view that allows the user to perform ratings
+ *
+ *  The properties ratedImage and placeholderImage must be setted
+ *  to specify the images to use to render the view. The rating is the current rating value
+ *  of the view
+ *
+ *  A delegate object should implement the methods defined in the BLCStarRatingViewDelegate protocol
+ *  to receive notifications about the updates of the view.
+ *
+ *  @see BLCStarRatingViewDelegate
+ */
 @interface BLCStarRatingView : UIView
 
 /**
