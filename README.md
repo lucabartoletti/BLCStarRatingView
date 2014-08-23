@@ -23,7 +23,7 @@ The component can be installed easily using cocoapod
 
 ```ruby
 platform :ios, '6.0'
-pod "BLCStarRatingView", "~> 1.0.0"
+pod "BLCStarRatingView", "~> 1.1.0"
 ```
 
 #### Todo
