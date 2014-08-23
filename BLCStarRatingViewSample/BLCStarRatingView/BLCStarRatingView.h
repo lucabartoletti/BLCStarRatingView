@@ -64,17 +64,17 @@
 @property (assign, nonatomic) NSUInteger rating;
 
 /**
- *  The delegate
+ *  The delegate of the BLCStarRatingView instance
  */
 @property (weak, nonatomic) id<BLCStarRatingViewDelegate> delegate;
 
 /**
- *  The horizontal space between stars. Default is 5.0f
+ *  The horizontal space between stars. Default value is 5.0f
  */
 @property (assign, nonatomic) CGFloat starHorizontalSpace;
 
 /**
- *  The rated image
+ *  The rated image.
  */
 @property (strong, nonatomic) UIImage *ratedImage;
 
@@ -82,5 +82,11 @@
  *  The placeholder image.
  */
 @property (strong, nonatomic) UIImage *placeholderImage;
+
+/**
+ *  If YES the update of the rating is continous during the user interaction.
+ *  NO Otherwise. The Default value is YES
+ */
+@property (assign, getter=isContinuos, nonatomic) BOOL continous;
 
 @end

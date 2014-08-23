@@ -18,6 +18,7 @@ typedef NS_ENUM(NSUInteger, ImageType) {
 
 @property (weak, nonatomic) IBOutlet BLCStarRatingView *starRatingView;
 
+@property (weak, nonatomic) IBOutlet UISwitch *continuosSwitch;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *imageSegmentedControl;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *rateSegmentedControl;
 
@@ -37,7 +38,9 @@ typedef NS_ENUM(NSUInteger, ImageType) {
 {
     [super viewDidLoad];
     
-    self.starRatingView.delegate = self;
+    _starRatingView.delegate = self;
+    
+    _continuosSwitch.on = self.starRatingView.continous;
     
     [self p_updatedRatingViewWithImageType:self.imageSegmentedControl.selectedSegmentIndex];
 }
@@ -45,7 +48,7 @@ typedef NS_ENUM(NSUInteger, ImageType) {
 - (IBAction)rateSegmentedControlValueChanged:(id)sender
 {
     UISegmentedControl *segmentedControl = sender;
-    self.starRatingView.rating = segmentedControl.selectedSegmentIndex;
+    _starRatingView.rating = segmentedControl.selectedSegmentIndex;
 }
 
 - (IBAction)imageSegmentedControlValueChanged:(id)sender {
@@ -55,7 +58,7 @@ typedef NS_ENUM(NSUInteger, ImageType) {
 
 - (IBAction)spaceSliderValueChanged:(id)sender {
     UISlider *slider = sender;
-    self.starRatingView.starHorizontalSpace = slider.value;
+    _starRatingView.starHorizontalSpace = slider.value;
 }
 
 
@@ -63,12 +66,17 @@ typedef NS_ENUM(NSUInteger, ImageType) {
     
     //Updates the images to match the type
     if (type == ImageTypeSmall) {
-        self.starRatingView.placeholderImage = [UIImage imageNamed:@"star"];
+        _starRatingView.placeholderImage = [UIImage imageNamed:@"star"];
         self.starRatingView.ratedImage = [UIImage imageNamed:@"star_highlighted"];
     } else {
-        self.starRatingView.placeholderImage = [UIImage imageNamed:@"star_big"];
-        self.starRatingView.ratedImage = [UIImage imageNamed:@"star_highlighted_big"];
+        _starRatingView.placeholderImage = [UIImage imageNamed:@"star_big"];
+        _starRatingView.ratedImage = [UIImage imageNamed:@"star_highlighted_big"];
     }
+}
+
+- (IBAction)continousValueChanged:(UISwitch*)switchSender
+{
+    _starRatingView.continous = switchSender.on;
 }
 
 #pragma mark - StarRatingView delegate
@@ -81,7 +89,7 @@ typedef NS_ENUM(NSUInteger, ImageType) {
         NSLog(@"");
     }
     
-    self.rateSegmentedControl.selectedSegmentIndex = value;
+    _rateSegmentedControl.selectedSegmentIndex = value;
 }
 
 - (void)starRatingViewUpdateBegan:(BLCStarRatingView *)ratingView
