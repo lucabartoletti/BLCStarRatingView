@@ -18,14 +18,18 @@ static const NSInteger kBLCStarRatingViewNumberOfStar = 5;
 - (void)p_drawStarAtPosition:(NSInteger)position;
 - (CGSize)p_intrinsicSize;
 - (CGSize)p_starSize;
-- (void)p_updateStarsValueWithTouchAtPoint:(CGPoint)point;
+//Return YES if the rating value is updated. NO otherwise
+- (BOOL)p_updateStarsValueWithTouchAtPoint:(CGPoint)point;
 
 @end
 
 @implementation BLCStarRatingView
 {
+    //Keeps track of the touch at the begin of the user interaction
     NSUInteger _touchBeganRating;
 }
+
+#pragma mark - Lifecycle
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -45,6 +49,15 @@ static const NSInteger kBLCStarRatingViewNumberOfStar = 5;
     return self;
 }
 
+- (void)p_initialize
+{
+    _starHorizontalSpace = 5;
+    _rating = 0;
+    _touchBeganRating = 0;
+    _continous = YES;
+    [self setContentMode:UIViewContentModeRedraw];
+}
+
 #pragma mark - Layout
 
 - (CGSize)sizeThatFits:(CGSize)size
@@ -55,131 +68,6 @@ static const NSInteger kBLCStarRatingViewNumberOfStar = 5;
 - (CGSize)intrinsicContentSize
 {
     return [self p_intrinsicSize];
-}
-
-#pragma mark - Drawing
-
-- (void)drawRect:(CGRect)rect
-{
-    for (NSInteger i=0; i<kBLCStarRatingViewNumberOfStar; i++) {
-        [self p_drawStarAtPosition:i];
-    }
-}
-
-#pragma mark - Public methods
-
-- (void)setRating:(NSUInteger)rating
-{
-    BOOL isUpdated = (_rating != rating);
-    
-    _rating = rating;
-    
-    if (isUpdated) {
-        [self setNeedsDisplay];
-        [self p_delegateDidChangeRating:_rating];
-    }
-}
-
-- (void)setRatedImage:(UIImage *)image
-{
-    _ratedImage = image;
-    
-    [self setNeedsDisplay];
-    [self invalidateIntrinsicContentSize];
-}
-
-- (void)setPlaceholderImage:(UIImage *)image
-{
-    _placeholderImage = image;
-    
-    [self setNeedsDisplay];
-    [self invalidateIntrinsicContentSize];
-}
-
-- (void)setStarHorizontalSpace:(CGFloat)starHorizontalSpace
-{
-    _starHorizontalSpace = starHorizontalSpace;
-    
-    [self setNeedsDisplay];
-    [self invalidateIntrinsicContentSize];
-}
-
-#pragma mark - Touches 
-
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    _touchBeganRating = self.rating;
-    
-    UITouch *touch = [touches anyObject];
-    
-    [self p_updateStarsValueWithTouchAtPoint:[touch locationInView:self]];
-    
-    [self p_delegateUpdateBegan];
-}
-
-- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    UITouch *touch = [touches anyObject];
-    
-    [self p_updateStarsValueWithTouchAtPoint:[touch locationInView:self]];
-}
-
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    UITouch *touch = [touches anyObject];
-    
-    [self p_updateStarsValueWithTouchAtPoint:[touch locationInView:self]];
-    
-    [self p_delegateUpdateEnded];
-}
-
-- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    [self p_delegateUpdateEnded];
-}
-
-#pragma mark - Private methods
-
-- (void)p_initialize
-{
-    self.starHorizontalSpace = 5;
-    self.rating = 0;
-    self.contentMode = UIViewContentModeRedraw;
-}
-
-- (void)p_updateStarsValueWithTouchAtPoint:(CGPoint)point
-{
-    CGSize starsSize = [self p_intrinsicSize];
-    
-    CGFloat percentage = (point.x/starsSize.width);
-    if (percentage>1) {
-        percentage = 1;
-    } else if (percentage<0) {
-        percentage = 0;
-    }
-    
-    NSUInteger rating = ceilf(percentage*kBLCStarRatingViewNumberOfStar);
-    
-    self.rating = rating;
-}
-
-- (void)p_drawStarAtPosition:(NSInteger)position
-{
-    CGSize starSize = [self p_starSize];
-    CGSize instrinsicSize = [self p_intrinsicSize];
-    
-    //Calculate position x
-    CGFloat x = (round(starSize.width*position));
-    x += (self.starHorizontalSpace*position);
-    
-    //Calculate position y
-    CGFloat y = round((CGRectGetHeight(self.frame)/2) - (instrinsicSize.height/2));
-    
-    //Draw
-    [_placeholderImage drawAtPoint:CGPointMake(x, y)];
-    if (position<self.rating) {
-        [_ratedImage drawAtPoint:CGPointMake(x,y)];
-    }
 }
 
 - (CGSize)p_intrinsicSize;
@@ -211,6 +99,156 @@ static const NSInteger kBLCStarRatingViewNumberOfStar = 5;
     
     return CGSizeMake(starWidth, starHeight);
 }
+
+#pragma mark - Drawing
+
+- (void)drawRect:(CGRect)rect
+{
+    for (NSInteger i=0; i<kBLCStarRatingViewNumberOfStar; i++) {
+        [self p_drawStarAtPosition:i];
+    }
+}
+
+- (BOOL)p_updateStarsValueWithTouchAtPoint:(CGPoint)point
+{
+    CGSize starsSize = [self p_intrinsicSize];
+    
+    CGFloat percentage = (point.x/starsSize.width);
+    if (percentage>1) {
+        percentage = 1;
+    } else if (percentage<0) {
+        percentage = 0;
+    }
+    
+    NSUInteger rating = ceilf(percentage*kBLCStarRatingViewNumberOfStar);
+    
+    BOOL isUpdated = (_rating != rating);
+    if (isUpdated) {
+        self.rating = rating;
+    }
+    
+    return isUpdated;
+}
+
+- (void)p_drawStarAtPosition:(NSInteger)position
+{
+    CGSize starSize = [self p_starSize];
+    CGSize instrinsicSize = [self p_intrinsicSize];
+    
+    //Calculate position x
+    CGFloat x = (round(starSize.width*position));
+    x += (self.starHorizontalSpace*position);
+    
+    //Calculate position y
+    CGFloat y = round((CGRectGetHeight(self.frame)/2) - (instrinsicSize.height/2));
+    
+    //Draw
+    [_placeholderImage drawAtPoint:CGPointMake(x, y)];
+    if (position<self.rating) {
+        [_ratedImage drawAtPoint:CGPointMake(x,y)];
+    }
+}
+
+#pragma mark - Setter/Getter methods
+
+- (void)setRating:(NSUInteger)rating
+{
+    BOOL isUpdated = (_rating != rating);
+    
+    _rating = rating;
+    
+    if (isUpdated) {
+        [self setNeedsDisplay];
+    }
+}
+
+- (void)setRatedImage:(UIImage *)image
+{
+    _ratedImage = image;
+    
+    [self setNeedsDisplay];
+    [self invalidateIntrinsicContentSize];
+}
+
+- (void)setPlaceholderImage:(UIImage *)image
+{
+    _placeholderImage = image;
+    
+    [self setNeedsDisplay];
+    [self invalidateIntrinsicContentSize];
+}
+
+- (void)setStarHorizontalSpace:(CGFloat)starHorizontalSpace
+{
+    _starHorizontalSpace = starHorizontalSpace;
+    
+    [self setNeedsDisplay];
+    [self invalidateIntrinsicContentSize];
+}
+
+#pragma mark - Touches 
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    //Inform the delegate that an update began
+    [self p_delegateUpdateBegan];
+    
+    _touchBeganRating = _rating;
+    
+    UITouch *touch = [touches anyObject];
+    
+    BOOL isUpdate = [self p_updateStarsValueWithTouchAtPoint:[touch locationInView:self]];
+    
+    if (isUpdate && _continous) {
+        [self p_delegateDidChangeRating:_rating];
+    }
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch *touch = [touches anyObject];
+    
+    BOOL isUpdate = [self p_updateStarsValueWithTouchAtPoint:[touch locationInView:self]];
+    
+    if (isUpdate && _continous) {
+        [self p_delegateDidChangeRating:_rating];
+    }
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch *touch = [touches anyObject];
+    
+    BOOL isUpdate = [self p_updateStarsValueWithTouchAtPoint:[touch locationInView:self]];
+    
+    //If it the update is continuos call and there is an update call the delegate
+    if (isUpdate && _continous) {
+        [self p_delegateDidChangeRating:_rating];
+    } else if (_continous == NO) {
+        //If is not continuos check if the rating is changed from the touchBegan
+        if (_touchBeganRating!=_rating) {
+            [self p_delegateDidChangeRating:_rating];
+        }
+    }
+    
+    [self p_delegateUpdateEnded];
+}
+
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self p_delegateUpdateEnded];
+    
+    if (_continous  == NO) {
+        if (_touchBeganRating!=_rating) {
+            //Reset the rating to the original value
+            _rating = _touchBeganRating;
+            
+            [self setNeedsDisplay];
+        }
+    }
+}
+
+#pragma mark - delegate notification
 
 - (void)p_delegateDidChangeRating:(NSUInteger)rating;
 {

@@ -62,7 +62,7 @@
 		9A34C65C18FF4C3500155D94 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = BLCStarRatingViewSample/ViewController.m; sourceTree = SOURCE_ROOT; };
 		9A34C65D18FF4C3500155D94 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ViewController.xib; path = BLCStarRatingViewSample/ViewController.xib; sourceTree = SOURCE_ROOT; };
 		9ACBE3201989C74B00CA7A91 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		9AFF8DF21989B10400DA19C0 /* podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = podfile; sourceTree = SOURCE_ROOT; };
+		9AFF8DF21989B10400DA19C0 /* podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A5389D1FD1E04931AC9812E6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -452,7 +452,7 @@
 					"$(SRCROOT)/BLCStarRatingViewSample",
 				);
 				INFOPLIST_FILE = "BLCStarRatingViewSample/BLCStarRatingView-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -472,7 +472,7 @@
 					"$(SRCROOT)/BLCStarRatingViewSample",
 				);
 				INFOPLIST_FILE = "BLCStarRatingViewSample/BLCStarRatingView-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

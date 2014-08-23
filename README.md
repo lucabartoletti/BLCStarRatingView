@@ -1,5 +1,10 @@
 BLCStarRatingView
 =================
+
+[![Pod Version](http://img.shields.io/cocoapods/v/BLCStarRatingView.svg?style=flat)](http://cocoadocs.org/docsets/BLCStarRatingView/)
+[![Pod Platform](http://img.shields.io/cocoapods/p/BLCStarRatingView.svg?style=flat)](http://cocoadocs.org/docsets/BLCStarRatingView/)
+[![Pod License](http://img.shields.io/cocoapods/l/BLCStarRatingView.svg?style=flat)](http://opensource.org/licenses/MIT)
+
 [![Build Status](https://travis-ci.org/lucabartoletti/BLCStarRatingView.svg?branch=master)](https://travis-ci.org/lucabartoletti/BLCStarRatingView)
 
 A star rating view for iOS
@@ -18,7 +23,7 @@ The component can be installed easily using cocoapod
 
 ```ruby
 platform :ios, '6.0'
-pod "BLCStarRatingView", "~> 1.0"
+pod "BLCStarRatingView", "~> 1.0.0"
 ```
 
 #### Todo
