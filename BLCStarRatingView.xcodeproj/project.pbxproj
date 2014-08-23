@@ -452,7 +452,7 @@
 					"$(SRCROOT)/BLCStarRatingViewSample",
 				);
 				INFOPLIST_FILE = "BLCStarRatingViewSample/BLCStarRatingView-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -472,7 +472,7 @@
 					"$(SRCROOT)/BLCStarRatingViewSample",
 				);
 				INFOPLIST_FILE = "BLCStarRatingViewSample/BLCStarRatingView-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
