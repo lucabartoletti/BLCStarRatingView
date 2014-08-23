@@ -29,4 +29,4 @@ pod "BLCStarRatingView", "~> 1.1.0"
 #### Todo
 
 * Improve the tests
-* Add a 'continuous' property to indicate whether changes of the value generate continuous update events
+* Add a default star shape
